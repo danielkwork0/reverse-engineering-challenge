@@ -1,14 +1,11 @@
 import argparse
-import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 
+from common import DETRENDED_COLOR, RAW_COLOR, REFRACTORY_MS, SURFACE, TEXT_PRIMARY, THRESHOLD, style_axis
 from spike_model import SEED, WINDOW_S, fit_waveform, recording, simulate, spike_train, window_edges
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "Part 5"))
-from common import DETRENDED_COLOR, RAW_COLOR, REFRACTORY_MS, SURFACE, TEXT_PRIMARY, THRESHOLD, style_axis  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 PANEL_HEIGHT = 2.8

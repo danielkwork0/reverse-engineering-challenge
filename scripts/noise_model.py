@@ -1,18 +1,15 @@
 import argparse
-import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
 
-HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parent / "drift"))
-from drift_model import X_TICK_STEP, YLIM, fit_drift, sine, spike_mask  # noqa: E402
-
-sys.path.insert(0, str(HERE.parents[1] / "Part 5"))
-from common import (DETRENDED_COLOR, RAW_COLOR, REFRACTORY_MS, SURFACE, TEXT_PRIMARY, THRESHOLD, detect_spikes,  # noqa: E402
+from common import (DETRENDED_COLOR, RAW_COLOR, REFRACTORY_MS, SURFACE, TEXT_PRIMARY, THRESHOLD, detect_spikes,
                     load, refractory_samples_from, style_axis)
+from drift_model import X_TICK_STEP, YLIM, fit_drift, sine, spike_mask
+
+HERE = Path(__file__).resolve().parent
 
 SEED = 42
 PANEL_HEIGHT = 2.8

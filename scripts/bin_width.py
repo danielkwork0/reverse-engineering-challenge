@@ -1,11 +1,8 @@
 import argparse
-import sys
-from pathlib import Path
 
 import numpy as np
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "Part 5"))
-from common import THRESHOLD, REFRACTORY_MS, detect_spikes, load, refractory_samples_from, sampling_interval  # noqa: E402
+from common import THRESHOLD, REFRACTORY_MS, detect_spikes, load, refractory_samples_from, sampling_interval
 
 WIDTHS = [0.5, 1, 2, 2.5, 3, 4, 5, 10]
 OFFSETS = 20

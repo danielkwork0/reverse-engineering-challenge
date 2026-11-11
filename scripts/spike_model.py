@@ -1,11 +1,7 @@
-import sys
-from pathlib import Path
-
 import numpy as np
 from scipy.optimize import curve_fit
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "Part 5"))
-from common import (REFRACTORY_MS, THRESHOLD, baseline, detect_spikes, load, refractory_samples_from,  # noqa: E402
+from common import (REFRACTORY_MS, THRESHOLD, baseline, detect_spikes, load, refractory_samples_from,
                     sampling_interval)
 
 PEAK_SEARCH = 5

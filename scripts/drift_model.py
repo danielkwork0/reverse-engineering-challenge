@@ -1,12 +1,10 @@
-import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "Part 5"))
-from common import (BASELINE_WINDOW_MS, DETRENDED_COLOR, RAW_COLOR, REFRACTORY_MS, SURFACE, TEXT_PRIMARY,  # noqa: E402
+from common import (BASELINE_WINDOW_MS, DETRENDED_COLOR, RAW_COLOR, REFRACTORY_MS, SURFACE, TEXT_PRIMARY,
                     THRESHOLD, baseline, detect_spikes, load, refractory_samples_from, style_axis)
 
 HERE = Path(__file__).resolve().parent

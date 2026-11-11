@@ -5,8 +5,7 @@ from pathlib import Path
 import numpy as np
 
 HERE = Path(__file__).resolve().parent
-for part in ("spikes", "drift", "noise", "full_model"):
-    sys.path.insert(0, str(HERE.parent / part))
+sys.path.insert(0, str(HERE.parent / "scripts"))
 from drift_model import MASK_AFTER, MASK_BEFORE, sine, spike_mask  # noqa: E402
 from full_model import fit_all, fit_signal, synthesize  # noqa: E402
 from noise_model import fit_noise  # noqa: E402

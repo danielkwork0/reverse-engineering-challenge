@@ -1,13 +1,9 @@
 import argparse
-import sys
-from pathlib import Path
 
 import numpy as np
 
+from common import REFRACTORY_MS
 from spike_model import SEED, WINDOW_S, fit_waveform, recording, simulate, spike_train, window_edges, window_rates
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "Part 5"))
-from common import REFRACTORY_MS  # noqa: E402
 
 
 def coefficients(times, trace, dt, edges):

@@ -5,7 +5,7 @@ import numpy as np
 
 from test_model import DT, N, RECOVERY_SEEDS, T, TOL, TRUE, WINDOW_S, synthetic
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "full_model"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from full_model import fit_all, fit_signal, synthesize  # noqa: E402
 
 NAMES = ["Spike amplitude A (a.u.)", "Spike decay tau (ms)", "Drift amplitude (a.u.)", "Drift frequency (Hz)",

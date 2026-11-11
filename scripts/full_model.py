@@ -1,23 +1,19 @@
 import argparse
-import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
 
-HERE = Path(__file__).resolve().parent
-for part in ("spikes", "drift", "noise"):
-    sys.path.insert(0, str(HERE.parent / part))
-import spike_model  # noqa: E402
-import noise_model  # noqa: E402
-from drift_model import X_TICK_STEP, YLIM, fit_drift, sine, spike_mask  # noqa: E402
-from noise_model import fit_noise  # noqa: E402
-from spike_model import PEAK_SEARCH, fit_waveform, simulate, spike_train  # noqa: E402
-
-sys.path.insert(0, str(HERE.parents[1] / "Part 5"))
-from common import (DETRENDED_COLOR, RAW_COLOR, REFRACTORY_MS, SURFACE, TEXT_PRIMARY, THRESHOLD, baseline,  # noqa: E402
+import noise_model
+import spike_model
+from common import (DETRENDED_COLOR, RAW_COLOR, REFRACTORY_MS, SURFACE, TEXT_PRIMARY, THRESHOLD, baseline,
                     detect_spikes, load, refractory_samples_from, sampling_interval, style_axis)
+from drift_model import X_TICK_STEP, YLIM, fit_drift, sine, spike_mask
+from noise_model import fit_noise
+from spike_model import PEAK_SEARCH, fit_waveform, simulate, spike_train
+
+HERE = Path(__file__).resolve().parent
 
 PANEL_HEIGHT = 2.8
 HIST_BINS = 120
